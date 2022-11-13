@@ -1,0 +1,37 @@
+<AddNote>:
+	name: 'AddNote'
+	
+	zag_input: zag_input
+	text_input: text_input
+	
+	canvas:
+		Color:
+			rgba: (241/255, 244/255, 250/255, 1.0)
+		Rectangle:
+			size: self.size
+			pos: self.pos
+			
+	MDIconButton:
+		pos_hint: {'x': 0.05, 'center_y': 0.95}
+		icon: 'arrow-u-left-top'
+		on_release: app.root.current = 'Notes'
+		
+	MDIconButton:
+		pos_hint: {'right': 1, 'center_y': 0.95}
+		icon: 'note-plus-outline'
+		on_release: root.save_note()
+		
+	MDTextField:
+		hint_text: 'Заголовок...'
+		size_hint_x: .8
+		pos_hint: {'x': 0.05, 'center_y' : 0.8}			
+		id: zag_input
+		multiline: False
+		font_size: '32sp'
+		
+	MDTextField:
+		hint_text: 'Введите текст'
+		size_hint_x: .8
+		pos_hint: {'x': 0.05, 'center_y' : 0.7}			
+		id: text_input
+		font_size: '24sp'

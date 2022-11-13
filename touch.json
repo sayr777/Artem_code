@@ -1,0 +1,21 @@
+[
+		{
+        		"news": "Новости ВНИРО",
+        		"short_name": "Читайте новости из Всероссийского научно-исследовательского института рыбного хозяйства и океанографии",
+        		"external_link": "http://kaspnirh.vniro.ru/",
+    			"avatar" : "i.webp"
+
+    		}, {
+        		"news": "Турнир КлЁвая осень",
+        		"short_name": "C 16 сентября по 04 октября пройдет дружесткий турнир КлЁвая осень",
+        		"external_link": "https://dvapeskarya.ru/%D0%BB%D1%8E%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9-%D1%80%D1%8B%D0%B1%D0%BE%D0%BB%D0%BE%D0%B2%D0%BD%D1%8B%D0%B9-%D1%82%D1%83%D1%80%D0%BD%D0%B8%D1%80-%D0%BA%D0%BB%D1%91/",
+    			"avatar" :  "avatar.png"
+    		}, {
+    			"news": "Магазин JP-Fishing",
+        		"short_name": " Интернет-магазин рыболовных принадлежностей из Японии",
+        		"external_link": "https://jpfishing.ru/",
+    			"avatar" :  "jp-logo.jpg"
+    		}
+
+]
+

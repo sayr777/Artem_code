@@ -1,0 +1,49 @@
+<ProfileDetails>:
+	name: 'ProfileDetails'
+	on_enter: root.entering()
+	
+	canvas:
+		Color:
+			rgba: (241/255, 244/255, 250/255, 1.0)
+		Rectangle:
+			size: self.size
+			pos: self.pos
+			
+	MDIconButton:
+		pos_hint: {'x': 0.05, 'center_y': 0.95}
+		icon: 'arrow-u-left-top'
+		on_release: app.root.current = 'User'
+		
+	MDLabel:
+		pos_hint: {'x': 0.2, 'center_y': 0.95}
+		font_size: '18sp'
+		bold: True
+		text: 'Редактировать профиль'
+		
+	MDGridLayout:
+		pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+		cols: 1
+		rows: 3
+		size_hint_x: 0.93
+		size_hint_y: 0.6
+	
+		OneLineAvatarListItem:
+			text: root.user_surname + ' ' + root.user_name
+			on_press: root.click_on_name()
+		
+			IconLeftWidget:
+				icon: 'account-outline'
+				
+		OneLineAvatarListItem:
+			text: root.user_mail
+			on_press: root.click_on_mail()
+		
+			IconLeftWidget:
+				icon: 'email'
+				
+		OneLineAvatarListItem:
+			text: root.user_phone
+			on_press: root.click_on_phone()
+		
+			IconLeftWidget:
+				icon: 'cellphone'

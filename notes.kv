@@ -1,0 +1,95 @@
+<Notes>:
+	name: 'Notes'
+	note1: note1
+	note2: note2
+	note3: note3
+	
+	on_enter: root.entering()
+	
+	canvas:
+		Color:
+			rgba: (241/255, 244/255, 250/255, 1.0)
+		Rectangle:
+			size: self.size
+			pos: self.pos
+			
+	MDIconButton:
+		pos_hint: {'x': 0.05, 'center_y': 0.95}
+		icon: 'arrow-u-left-top'
+		on_release: app.root.current = 'User'
+		
+	MDIconButton:
+		pos_hint: {'right': 1, 'center_y': 0.95}
+		icon: 'note-plus-outline'
+		on_release: root.add_note()
+		
+	MDLabel:
+		pos_hint: {'x': 0.05, 'center_y': 0.9}
+		font_size: '18sp'
+		bold: True
+		text: 'Мои заметки'
+		
+	MDGridLayout:
+		pos_hint: {'center_y': 0.45}
+		size_hint_y: 0.8
+		rows: 3
+		padding: 16
+		spacing: 5
+		
+		MDCard:
+			id: note1
+			radius: [16, ]
+			border_radius: 16
+			pos_hint: {'center_x': 0.5}
+			on_release: root.open_menu1()
+		
+			MDGridLayout:
+				rows: 2
+				spacing: 2
+			
+				MDLabel:
+					font_size: '30sp'
+					bold: True
+					text: root.zag1
+				
+				MDLabel:
+					font_size: '15sp'
+					text: root.text1
+				
+		MDCard:
+			id: note2
+			radius: [16, ]
+			border_radius: 16
+			pos_hint: {'center_x': 0.5}
+		
+			MDGridLayout:
+				rows: 2
+				spacing: 2
+			
+				MDLabel:
+					font_size: '30sp'
+					bold: True
+					text: root.zag2
+				
+				MDLabel:
+					font_size: '15sp'
+					text: root.text2
+				
+		MDCard:
+			id: note3
+			radius: [16, ]
+			border_radius: 16
+			pos_hint: {'center_x': 0.5}
+		
+			MDGridLayout:
+				rows: 2
+				spacing: 2
+			
+				MDLabel:
+					font_size: '30sp'
+					bold: True
+					text: root.zag3
+				
+				MDLabel:
+					font_size: '15sp'
+					text: root.text3

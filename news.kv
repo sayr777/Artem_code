@@ -1,0 +1,28 @@
+#:import SliverToolbar slivertoolbar.SliverToolbar
+
+<News>:
+	name: 'News'
+	
+	on_enter: root.entering()
+	canvas:
+		Color:
+			rgba: (241/255, 244/255, 250/255, 1.0)
+		Rectangle:
+			size: self.size
+			pos: self.pos
+
+	MDSliverAppbar:
+		background_color: "E5E5E5"
+		toolbar_cls: SliverToolbar()
+
+		MDSliverAppbarHeader:
+			MDRelativeLayout:
+				FitImage:
+					source: "resources/news_pic/bg.png"
+
+	MDSliverAppbarContent:
+		id: content
+		orientation: "vertical"
+		padding: "12dp"
+		spacing: "12dp"
+		adaptive_height: True

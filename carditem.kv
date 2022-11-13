@@ -1,0 +1,29 @@
+<CardItem>:
+	size_hint_y: None
+	height: "86dp"
+	padding: "4dp"
+	radius: [12, ]
+
+	FitImage:
+	        source: "resources/news_pic/avatar.png"
+	        radius: root.radius
+	        size_hint_x: None
+	        width: root.height
+
+	MDBoxLayout:
+	        orientation: "vertical"
+	        adaptive_height: True
+	        spacing: "6dp"
+	        padding: "12dp", 0, 0, 0
+	        pos_hint: {"center_y": .5}
+
+	        MDLabel:
+	        	text: "Турнир КлЁвая осень"
+	        	font_style: "H6"
+	        	adaptive_height: True
+
+	        MDLabel:
+	        	text: "C 16 сентября по 04 октября пройдет дружесткий турнир КлЁвая осень"
+			font_style: "Caption"
+			theme_text_color: "Hint"
+			adaptive_height: True

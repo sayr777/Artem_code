@@ -1,0 +1,51 @@
+<CardFish>:
+	radius: [16,]
+	border_radius: 16
+	pos_hint: {'center_x' : 0.5}
+	size_hint_x: 0.8
+	size_hint_y: None
+	text_color: 1,0,0,1
+	padding: '16dp'
+	spacing: '16dp'
+	height: 300
+	on_release: app.root.current = 'Esox'
+	
+	image_fish: image_fish
+		
+	MDGridLayout:
+		cols: 2
+		rows: 1
+			
+		MDGridLayout:
+			cols: 1
+			rows: 4
+		
+			MDLabel:
+				font_size: '20sp'
+				text: '    '+root.fish_name
+			
+			MDLabel:
+				font_size: '12sp'
+				text: '    '+root.latin_fish_name
+
+			MDGridLayout:
+				cols: 2
+				MDIconButton:
+					icon: 'calendar'
+					
+				MDLabel:
+					font_size: '12sp'
+					text: 'Май - Июнь'
+
+			MDLabel:
+				font_size: '12sp'
+				font_style: 'Proxima Nova'
+				text: ' '
+				
+		FitImage:
+			id: image_fish
+			pos: self.parent.parent.pos
+			pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+			size_hint_y: None
+			width: 200
+			allow_stretch: True

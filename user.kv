@@ -1,0 +1,64 @@
+<User>:
+	name: 'User'
+	on_enter: root.entering()
+	
+	canvas:
+		Color:
+			rgba: (241/255, 244/255, 250/255, 1.0)
+		Rectangle:
+			size: self.size
+			pos: self.pos
+			
+	MDIconButton:
+		pos_hint: {'right': 1, 'center_y': 0.97}
+		icon: 'send-outline'
+		on_release: root.click_on_telegram()
+
+	MDLabel:
+		pos_hint: {'x': 0.05, 'center_y': 0.97}
+		font_size: '18sp'
+		bold: True
+		text: ' ' + root.user_name + ' ' + root.user_surname
+		
+	MDFlatButton:
+		font_size: '18sp'
+		pos_hint: {'x': 0.05, 'center_y': 0.94}
+		text: 'Детали профиля >'
+		on_release: root.click_on_profile_details()
+		
+	MDLabel:
+		pos_hint: {'x': 0.05, 'center_y': 0.8}
+		font_size: '18sp'
+		bold: True
+		text: 'Заметки'
+		
+	MDFlatButton:
+		font_size: '18sp'
+		pos_hint: {'right': 0.95, 'center_y': 0.8}
+		on_release: root.click_on_note()
+		text: 'Ещё'
+		theme_text_color: 'Custom'
+		text_color: app.theme_cls.primary_color
+		
+	MDFlatButton:
+		font_size: '14sp'
+		pos_hint: {'x': 0.05, 'center_y': 0.1}
+		text: 'Сменить регион рыбалки'
+		theme_text_color: 'Custom'
+		text_color: app.theme_cls.primary_color
+		on_release:
+			app.root.current = 'RegionChooser'
+		
+	#MDLabel:
+		#pos_hint: {'x': 0.05, 'center_y': 0.5}
+		#font_size: '18sp'
+		#bold: True
+		#text: 'Мои места'
+		
+	#MDFlatButton:
+		#font_size: '18sp'
+		#pos_hint: {'right': 0.95, 'center_y': 0.5}
+		#on_release: root.click_on_profile_details()
+		#text: 'Ещё'
+		#theme_text_color: 'Custom'
+		#text_color: app.theme_cls.primary_color
